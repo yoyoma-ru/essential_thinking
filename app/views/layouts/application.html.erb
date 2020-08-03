@@ -4,12 +4,48 @@
     <title>EssentialThinking</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+      <header>
+          <nav class="navbar navbar-default navbar-fixed-top">
+              <div class="container-fluid">
+                  <div class="navbar-header">
+                      <a class="rogo" href="#">essential_thinking</a>
+                      <a class="headline" href="#">エッセンシャル思考</a>
+                      <p class="user-name">ようこそ"ゲスト"様</p>
+                  </div>
+         　　　　　<!-- [sta]ハンバーガメニュー -->
+                  <div id="sp-menu">
+                      <h2>MENU</h2>
+                      <ul>
+                          <li><a href="#">MENU1</a></li>
+                          <li><a href="#">MENU2</a></li>
+                          <li><a href="#">MENU3</a></li>
+                          <li><a href="#">MENU4</a></li>
+                          <li><a href="#">MENU5</a></li>
+                      </ul>
+                  </div>
+                  <div id="hm-icon">
+                      <a class="menu-trigger" href="#">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                      </a>
+                  </div>
+                  <!-- [end]ハンバーガメニュー -->
+      </header>
     <%= yield %>
+
+      <footer>
+          <div class="container-fluid">
+              <div>©︎yoyo</div>
+          </div>
+      </footer>
   </body>
 </html>
