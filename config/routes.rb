@@ -13,6 +13,10 @@ Rails.application.routes.draw do
   	passwords:     'admins/passwords',
   	registrations: 'admins/registrations'
   }
+  namespace :users do
+  	resources :learns, only: [:index, :show]
+  end
+
   root 'homes#top'
   get '/homes/about' => 'homes#about'
 end
