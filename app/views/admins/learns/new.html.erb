@@ -1,0 +1,47 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-offset-1 col-sm-10">
+			<h2>Learn作成ページ</h2>
+
+			<%= form_with(model: @learn, url: admins_learns_path, local: true ) do |f| %>
+			    <h4>Part Number</h4>
+			    <div class="field form-group">
+				    <%= f.label :番号 %>
+				    <%= f.select :part ,[["Part1","Part1"],["Part2","Part2"],["Part3","Part3"],["Part4","Part4"]], include_blank: "--下記より選択--" %>
+				</div>
+
+				<h4>Title</h4>
+				<div class="field form-group">
+					<%= f.label :タイトル%>
+					<%= f.text_field :title %>
+				</div>
+
+				<h4>Subtitle
+				<div class="field form-group">
+					<%= f.label :サブタイトル %>
+					<%= f.text_field :subtitle %>
+				</div>
+
+				<h4>Explanation</h4>
+				<div class="field form-group">
+					<%= f.label :説明文%>
+					<%= f.text_area :explanation %>
+				</div>
+
+				<h4>Essential Thinking</h4>
+				<div class="field form-group">
+					<%= f.label :非エッセンシャル思考の例 %>
+					<%= f.text_area :example_non_essential_thinking %>
+				</div>
+
+				<h4>Non Essential Thinking</h4>
+				<div class="field form-group">
+					<%= f.label :エッセンシャル思考の例 %>
+					<%= f.text_area :example_essential_thinking %>
+				</div>
+
+				<%= f.submit 'Create' %>
+			<% end %>
+		</div>
+	</div>
+</div>
