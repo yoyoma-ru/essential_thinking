@@ -26,10 +26,12 @@ ActiveRecord::Schema.define(version: 2020_08_04_022507) do
   end
 
   create_table "learns", force: :cascade do |t|
-    t.string "learn_title"
-    t.text "learn_explanation"
-    t.text "text_essential_thinking"
-    t.text "text_non_essentila_thinking"
+    t.string "part"
+    t.string "title"
+    t.string "subtitle"
+    t.text "explanation"
+    t.text "example_essential_thinking"
+    t.text "example_non_essential_thinking"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

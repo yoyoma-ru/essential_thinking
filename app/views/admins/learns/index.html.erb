@@ -1,0 +1,27 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-offset-1 col-sm-10">
+			<h2>管理者用　Learn一覧</h2>
+			<% @learns.each do |learn| %>
+			    <div>
+			    	<h4>id</h4>
+			    	<%= link_to admins_learn_path(learn) do %>
+			    	    <%= learn.id %>
+			    	<% end %>
+			    	<h4>パート</h4>
+			    	<%= learn.part %>
+<!-- 			    	<h3>タイトル</h3>
+			    	<%= learn.title %>
+			    	<h3>サブタイトル</h3>
+			    	<%= learn.subtitle %>
+			    	<h3>説明文</h3>
+			    	<%= learn.explanation %>
+			    	<h3>非エッセンシャル思考例</h3>
+			    	<%= learn.example_non_essential_thinking %>
+			    	<h3>エッセンシャル思考例</h3>
+			    	<%= learn.example_essential_thinking %> -->
+			    </div>
+			<% end %>
+		</div>
+	</div>
+</div>
